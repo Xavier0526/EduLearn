@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback</title>
+
+  <!-- =========================
+       CSS (STYLESHEET)
+       ========================= -->
+  <style>
+    :root{
+      --bg1:#0a1217;
+      --bg2:#081015;
+
+      --text:#eaf7fb;
+
+      --field-bg: rgba(20, 65, 75, .55);
+      --stroke: rgba(143,231,243,.85);
+
+      --accent:#63e6f6;
+      --accent2:#2fc3d8;
+
+      --bubble-bg: rgba(45, 122, 138, .92);
+      --bubble-stroke: rgba(210, 248, 255, .65);
+
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 30% 10%, rgba(47,195,216,.18), transparent 60%),
+        radial-gradient(900px 500px at 80% 20%, rgba(99,230,246,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+    }
+
+    /* OG form layout */
+    .wrap{
+      width: 100%;
+      min-height: 100vh;
+      display:flex;
+      justify-content:center;
+      padding: 60px 20px;
+    }
+
+    .form-area{
+      width: min(560px, 100%);
+    }
+
+    .field{ margin: 18px 0; }
+
+    .label{
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: rgba(234,247,251,.95);
+    }
+
+    .input, .select, .textarea{
+      width:100%;
+      border-radius: 14px;
+      border: 2px solid var(--stroke);
+      background: var(--field-bg);
+      color: var(--text);
+      outline:none;
+      padding: 14px 16px;
+      font-size: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,.18) inset;
+    }
+
+    .textarea{
+      min-height: 210px;
+      resize: none;
+    }
+
+    .input:focus, .select:focus, .textarea:focus{
+      box-shadow:
+        0 0 0 3px rgba(99,230,246,.20),
+        0 6px 14px rgba(0,0,0,.18) inset;
+    }
+
+    /* select caret */
+    .select{
+      appearance:none;
+      padding-right: 44px;
+      cursor:pointer;
+      background-image:
+        linear-gradient(45deg, transparent 50%, rgba(234,247,251,.95) 50%),
+        linear-gradient(135deg, rgba(234,247,251,.95) 50%, transparent 50%);
+      background-position:
+        calc(100% - 18px) 22px,
+        calc(100% - 12px) 22px;
+      background-size: 6px 6px, 6px 6px;
+      background-repeat:no-repeat;
+    }
+
+    /* dropdown options readable */
+    select option{
+      background: #0e2029;
+      color: #eaf7fb;
+    }
+    select option:disabled{
+      color: rgba(234,247,251,.55);
+    }
+
+    .actions{
+      margin-top: 26px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .btn{
+      border:none;
+      cursor:pointer;
+      font-weight: 900;
+      letter-spacing: .2px;
+      border-radius: 999px;
+      padding: 12px 34px;
+      font-size: 16px;
+      color: #052026;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 100%);
+      box-shadow: 0 14px 26px rgba(47,195,216,.22);
+      transition: .15s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn:active{ transform: translateY(0px); opacity:.92; }
+
+    /* Overlay + bubbles */
+    .overlay{
+      position:fixed;
+      inset:0;
+      background: rgba(0,0,0,.45);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 22px;
+      z-index: 10;
+    }
+    .overlay.show{ display:flex; }
+
+    .bubble{
+      width: min(360px, 92vw);
+      border-radius: 18px;
+      background: var(--bubble-bg);
+      border: 2px solid var(--bubble-stroke);
+      padding: 18px 16px 14px;
+      text-align: center;
+      box-shadow: 0 20px 55px rgba(0,0,0,.35);
+      display:none; /* toggle confirm vs thank */
+    }
+    .bubble.show{ display:block; }
+
+    .bubble h3{
+      margin: 4px 0 8px;
+      font-size: 16px;
+      font-weight: 1000;
+    }
+
+    .bubble p{
+      margin: 0 0 12px;
+      font-size: 13px;
+      line-height: 1.35;
+      color: rgba(234,247,251,.95);
+    }
+
+    .bubble-btn{
+      border:none;
+      cursor:pointer;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 10px 26px;
+      font-size: 14px;
+      color: #052026;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 100%);
+      box-shadow: 0 14px 22px rgba(47,195,216,.20);
+    }
+
+    .bubble-link{
+      display:block;
+      margin: 10px auto 0;
+      background:none;
+      border:none;
+      color: rgba(234,247,251,.9);
+      text-decoration: underline;
+      cursor:pointer;
+      font-weight: 800;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="form-area">
+
+      <form id="feedbackForm" novalidate>
+        <div class="field">
+          <div class="label">Email</div>
+          <input class="input" id="email" type="email" required />
+        </div>
+
+        <div class="field">
+          <div class="label">Subject</div>
+          <input class="input" id="subject" type="text" required />
+        </div>
+
+        <div class="field">
+          <div class="label">Type of Issue</div>
+          <select class="select" id="issueType" required>
+            <option value="" selected disabled></option>
+            <option>Bug / Feature not working</option>
+            <option>Account / Login</option>
+            <option>Rewards / Points</option>
+            <option>Suggestion / Improvement</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <div class="label">Description</div>
+          <textarea class="textarea" id="description" required></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="openConfirmBtn" type="button">Submit</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- CONFIRM + THANK YOU BUBBLES (SAME PAGE, NO NAVIGATION) -->
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <!-- Confirm bubble -->
+    <div class="bubble" id="confirmBubble" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <h3 id="confirmTitle">Confirm Submission</h3>
+      <p>Are you sure you want to submit this form?</p>
+
+      <button class="bubble-btn" id="confirmSubmitBtn" type="button">Submit</button>
+      <button class="bubble-link" id="goBackBtn" type="button">Go Back</button>
+    </div>
+
+    <!-- Thank you bubble -->
+    <div class="bubble" id="thankBubble" role="dialog" aria-modal="true" aria-labelledby="thankTitle">
+      <h3 id="thankTitle">Thank You!</h3>
+      <p>Thanks for submitting! We’ve received your form and will get back to you shortly.</p>
+
+      <button class="bubble-link" id="backHomeBtn" type="button">Back to Home</button>
+    </div>
+  </div>
+
+  <!-- =========================
+       JS (SCRIPT)
+       ========================= -->
+  <script>
+    const form = document.getElementById("feedbackForm");
+    const openConfirmBtn = document.getElementById("openConfirmBtn");
+
+    const overlay = document.getElementById("overlay");
+
+    const confirmBubble = document.getElementById("confirmBubble");
+    const thankBubble = document.getElementById("thankBubble");
+
+    const goBackBtn = document.getElementById("goBackBtn");
+    const confirmSubmitBtn = document.getElementById("confirmSubmitBtn");
+    const backHomeBtn = document.getElementById("backHomeBtn");
+
+    function isValid() {
+      const ok = form.checkValidity();
+      if (!ok) form.reportValidity();
+      return ok;
+    }
+
+    function openOverlay(which) {
+      overlay.classList.add("show");
+      overlay.setAttribute("aria-hidden", "false");
+
+      confirmBubble.classList.remove("show");
+      thankBubble.classList.remove("show");
+
+      if (which === "confirm") confirmBubble.classList.add("show");
+      if (which === "thank") thankBubble.classList.add("show");
+    }
+
+    function closeOverlay() {
+      overlay.classList.remove("show");
+      overlay.setAttribute("aria-hidden", "true");
+      confirmBubble.classList.remove("show");
+      thankBubble.classList.remove("show");
+    }
+
+    openConfirmBtn.addEventListener("click", () => {
+      if (isValid()) openOverlay("confirm");
+    });
+
+    goBackBtn.addEventListener("click", () => {
+      closeOverlay();
+    });
+
+    confirmSubmitBtn.addEventListener("click", () => {
+      // TODO: send your form using fetch/ajax here if needed
+
+      // Show thank-you bubble (same page)
+      openOverlay("thank");
+
+      // Optional: reset fields after submit
+      form.reset();
+    });
+
+    backHomeBtn.addEventListener("click", () => {
+      closeOverlay();
+    });
+
+    // Click outside bubble to close overlay
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeOverlay();
+    });
+
+    // ESC to close
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay.classList.contains("show")) closeOverlay();
+    });
+  </script>
+</body>
+</html>
