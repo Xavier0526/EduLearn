@@ -1,0 +1,7 @@
+.contents {
+    font-family: "Quicksand", sans-serif;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+}
