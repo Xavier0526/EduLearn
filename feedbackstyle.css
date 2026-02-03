@@ -1,0 +1,217 @@
+ :root{
+    /* page */
+    --bg1:#cfd8df;
+    --bg2:#c5d0d7;
+
+    /* text */
+    --text:#3a3a3a;
+
+    /* form */
+    --field-bg:#dbe7f0;
+    --stroke:#6c6c6c;
+
+    
+    --accent:#4a90a4;
+    --accent2:#6bb7cc;
+
+    /* overlay bubble */
+    --bubble-bg:#e8f4ff;        
+    --bubble-stroke:#6c6c6c;    
+    --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    font-family:var(--font);
+    color:var(--text);
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+  }
+
+  /* HEADER */
+  .topbar{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding: 22px 26px 0;
+  }
+
+  .back{
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    border:2px solid var(--stroke);
+    background:#dbe7f0;
+    color:var(--text);
+    display:grid;
+    place-items:center;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:900;
+    box-shadow: 0 3px 0 rgba(0,0,0,.25);
+  }
+  .back:hover{ filter: brightness(0.98); }
+
+  .title{
+    font-size:34px;
+    font-weight:900;
+    color: var(--text);
+    line-height:1;
+  }
+
+  /* FORM LAYOUT */
+  .wrap{
+    width: 100%;
+    min-height: 100vh;
+    display:flex;
+    justify-content:center;
+    padding: 28px 20px 60px;
+  }
+
+  .form-area{
+    width: min(720px, 100%);
+  }
+
+  .field{ margin: 18px 0; }
+
+  .label{
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+
+  .input, .select, .textarea{
+    width:100%;
+    border-radius: 12px;
+    border: 2px solid var(--stroke);
+    background: var(--field-bg);
+    color: var(--text);
+    outline:none;
+    padding: 14px 16px;
+    font-size: 16px;
+    box-shadow: 0 4px 0 rgba(0,0,0,.22);
+  }
+
+  .textarea{
+    min-height: 210px;
+    resize: none;
+  }
+
+  .input:focus, .select:focus, .textarea:focus{
+    box-shadow: 0 0 0 4px rgba(108,108,108,.20);
+  }
+
+  /* dropdown caret */
+  .select{
+    appearance:none;
+    padding-right: 44px;
+    cursor:pointer;
+    background-image:
+      linear-gradient(45deg, transparent 50%, var(--text) 50%),
+      linear-gradient(135deg, var(--text) 50%, transparent 50%);
+    background-position:
+      calc(100% - 18px) 22px,
+      calc(100% - 12px) 22px;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat:no-repeat;
+  }
+
+  /* dropdown options */
+  select option{
+    background: #ffffff;
+    color: var(--text);
+  }
+  select option:disabled{
+    color: rgba(58,58,58,.55);
+  }
+
+  .actions{
+    margin-top: 26px;
+    display:flex;
+    justify-content:center;
+  }
+
+  /* SUBMIT button */
+  .btn{
+    border: 2px solid var(--stroke);
+    cursor:pointer;
+    font-weight: 900;
+    border-radius: 999px;
+    padding: 12px 44px;
+    font-size: 16px;
+    color: var(--text);
+    background: linear-gradient(180deg, #e6eef3 0%, #d3dde4 100%);
+    box-shadow: 0 5px 0 rgba(0,0,0,.25);
+    transition: .15s ease;
+  }
+  .btn:hover{ transform: translateY(-1px); }
+  .btn:active{ transform: translateY(1px); box-shadow: 0 3px 0 rgba(0,0,0,.25); }
+
+  /* OVERLAY */
+  .overlay{
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,.18); 
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding: 22px;
+    z-index: 10;
+  }
+  .overlay.show{ display:flex; }
+
+  /* BUBBLES (Confirm + Thank You) */
+  .bubble{
+    width: min(360px, 92vw);
+    border-radius: 18px;
+    background: var(--bubble-bg);
+    border: 2px solid var(--bubble-stroke);
+    padding: 18px 16px 14px;
+    text-align: center;
+    box-shadow: 0 6px 0 rgba(0,0,0,.20);
+    display:none;
+    color: var(--text);
+  }
+  .bubble.show{ display:block; }
+
+  .bubble h3{
+    margin: 4px 0 8px;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text);
+  }
+
+  .bubble p{
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #4a4a4a;
+  }
+
+  .bubble-btn{
+    border:2px solid var(--stroke);
+    cursor:pointer;
+    font-weight: 900;
+    border-radius: 999px;
+    padding: 10px 28px;
+    font-size: 14px;
+    color: var(--text);
+    background: linear-gradient(180deg, #e6eef3 0%, #d3dde4 100%);
+    box-shadow: 0 4px 0 rgba(0,0,0,.22);
+  }
+
+  .bubble-link{
+    display:block;
+    margin: 10px auto 0;
+    background:none;
+    border:none;
+    color: #4a4a4a;
+    text-decoration: underline;
+    cursor:pointer;
+    font-weight: 800;
+    font-size: 12px;
+  }
