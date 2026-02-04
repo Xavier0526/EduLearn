@@ -5,3 +5,150 @@
     display: flex;
     width: 100%;
 }
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: #DDEFFF;
+}
+
+.quizbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.containerquiz {
+    width: 100%;
+    max-width: 600px;
+    /*margin: 0 auto;*/
+    text-align: center;
+}
+
+h1 {
+    align-items: center;
+    margin-bottom: 20px;
+    color:#545454;
+}
+
+#questionmath {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#545454;
+}
+
+#questionsci {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#545454;
+}
+
+#choicesmath {
+    margin-bottom: 20px;
+}
+
+#choicessci {
+    margin-bottom: 20px;
+}
+
+.choice-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 3px solid #545454;
+    border-radius: 15px;
+    background-color: #cfe9ff;
+    color:#545454;
+}
+
+.choice-btn:hover {
+    background-color: #e9f5ff;
+    box-shadow: 0px 3px 0px #7e7e7e;
+}
+
+#resultmath {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #545454;
+}
+
+#resultsci {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #545454;
+}
+
+#back-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 45px;
+    box-shadow: 0px 3px 0px #E7D500;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    color: #545454;
+}
+
+#back-btn:hover {
+    background-color: #E7D500;
+}
+
+.math-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 70px;
+    box-shadow: 0px 3px 0px #E7D500;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    color: #545454;
+}
+
+.science-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 60px;
+    box-shadow: 0px 3px 0px #49a900;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #63E600;
+    color: #545454;
+}
+
+.quiz-btn {
+    justify-content: center;
+    align-items: center;
+    grid-column-end: 1;
+}
+
+.quiz {
+    display: none;
+}
+
+.quiz.current {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#quizzespage {
+    gap:20px;
+}
