@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="contactstyle.css" />
+
+
+</head>
+
+<body>
+
+<div class="topbar">
+<button class="back" onclick="history.back()">←</button>
+<div class="title">Contact Us</div>
+
+<a href="profile.html" class="avatar">
+<img src="profile.jpg">
+</a>
+</div>
+
+<div class="wrap">
+
+<div class="center">
+<h3>Any questions? Ask us directly</h3>
+<p class="info">
+Company No: +65 6254 4382<br>
+Email: support@edulearn.com
+</p>
+</div>
+
+<div class="divider">
+<span></span>
+<strong>OR</strong>
+<span></span>
+</div>
+
+<h3 class="center">Drop us your questions here</h3>
+
+<form id="contactForm">
+
+<div class="field">
+<div class="label">Email</div>
+<input class="input" type="email" required>
+</div>
+
+<div class="field">
+<div class="label">Description</div>
+<textarea class="textarea" required></textarea>
+</div>
+
+<button type="button" class="btn" id="openConfirm">Submit</button>
+
+</form>
+
+</div>
+
+<div class="overlay" id="overlay">
+
+<div class="bubble" id="confirmBubble">
+<h3>Confirm Submission</h3>
+<p>Are you sure you want to submit?</p>
+<button class="bubble-btn" id="confirmBtn">Submit</button>
+<button class="bubble-link" id="cancelBtn">Go Back</button>
+</div>
+
+<div class="bubble" id="thankBubble">
+<h3>Thank You!</h3>
+<p>We’ve received your enquiry and will get back shortly.</p>
+<button class="bubble-link" id="closeBtn">Close</button>
+</div>
+
+</div>
+
+<script>
+const overlay=document.getElementById("overlay");
+const confirmBubble=document.getElementById("confirmBubble");
+const thankBubble=document.getElementById("thankBubble");
+const form=document.getElementById("contactForm");
+
+openConfirm.onclick=()=>{
+ if(form.checkValidity()){
+  overlay.classList.add("show");
+  confirmBubble.classList.add("show");
+ }
+ else form.reportValidity();
+};
+
+cancelBtn.onclick=()=>overlay.classList.remove("show");
+
+confirmBtn.onclick=()=>{
+ confirmBubble.classList.remove("show");
+ thankBubble.classList.add("show");
+ form.reset();
+};
+
+closeBtn.onclick=()=>{
+ overlay.classList.remove("show");
+ thankBubble.classList.remove("show");
+};
+</script>
+
+</body>
+</html>
