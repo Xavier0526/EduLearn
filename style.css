@@ -32,6 +32,14 @@ h1 {
     color:#545454;
 }
 
+#questionhis {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#545454;
+}
+
 #questionmath {
     font-family: "Quicksand", sans-serif;
     font-size: 25px;
@@ -48,11 +56,48 @@ h1 {
     color:#545454;
 }
 
+#questiongeo {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#545454;
+}
+
+#questiongen {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#545454;
+}
+
+#questionam {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#545454;
+}
+
+
 #choicesmath {
     margin-bottom: 20px;
 }
 
 #choicessci {
+    margin-bottom: 20px;
+}
+
+#choicesgeo {
+    margin-bottom: 20px;
+}
+
+#choicesgen {
+    margin-bottom: 20px;
+}
+
+#choicesam {
     margin-bottom: 20px;
 }
 
@@ -74,6 +119,14 @@ h1 {
     box-shadow: 0px 3px 0px #7e7e7e;
 }
 
+#resulthis {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #545454;
+}
+
 #resultmath {
     font-family: "Quicksand", sans-serif;
     font-size: 25px;
@@ -89,6 +142,31 @@ h1 {
     margin-bottom: 20px;
     color: #545454;
 }
+
+#resultgeo {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #545454;
+}
+
+#resultgen {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #545454;
+}
+
+#resultam {
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #545454;
+}
+
 
 #back-btn {
     font-family: "Quicksand", sans-serif;
@@ -107,30 +185,85 @@ h1 {
     background-color: #E7D500;
 }
 
+.history-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 90px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #545454;
+    background-color: #EBF300;
+    box-shadow: 0px 3px 0px #C7B700;
+}
+
+
 .math-btn {
     font-family: "Quicksand", sans-serif;
     font-size: 20px;
     font-weight: bold;
-    padding: 10px 70px;
-    box-shadow: 0px 3px 0px #E7D500;
+    padding: 10px 100px;
+    box-shadow: 0px 3px 0px #BD8B00;
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: yellow;
     color: #545454;
+    background-color: #EFBF2E;
+    box-shadow: 0px 3px 0px #BD8B00;
 }
 
 .science-btn {
     font-family: "Quicksand", sans-serif;
     font-size: 20px;
     font-weight: bold;
-    padding: 10px 60px;
-    box-shadow: 0px 3px 0px #49a900;
+    padding: 10px 90px;
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: #63E600;
     color: #545454;
+    background-color: #B7F400;
+    box-shadow: 0px 3px 0px #95C600;
+
+}
+
+.geography-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 73px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #545454;
+    background-color: #63E600;
+    box-shadow: 0px 3px 0px #0CB100;
+}
+
+.general-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 35px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #545454;
+    background-color: #00F2FF;
+    box-shadow: 0px 3px 0px #00B4B4;
+}
+
+.am-btn {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 60px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #545454;
+    background-color: #A9F4FF;
+    box-shadow: 0px 3px 0px #93DDE7;
 }
 
 .quiz-btn {

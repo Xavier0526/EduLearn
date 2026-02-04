@@ -6,17 +6,28 @@
     <title>eduLearn</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-    <script src="script.js"></script>
 </head>
 
-<div id="quizzespage" class="quiz current containerquiz"> <!--3 css class labels "quiz" "current" and "containerquiz" -->
-    <h1>Choose a Quiz</h1>
-    <button class="math-btn" onclick="findQuiz('math')">Math Quiz</button>
-    <button class="science-btn" onclick="findQuiz('science')">Science Quiz</button>
-    
-</div>
-
 <body class="quizbody">
+
+    <div id="quizzespage" class="quiz current containerquiz"> <!--3 css class labels "quiz" "current" and "containerquiz" -->
+    <h1>Pick a Quiz</h1>
+    <button class="history-btn" onclick="prepQuiz('history')">History</button>
+    <button class="math-btn" onclick="prepQuiz('math')">Math</button>
+    <button class="science-btn" onclick="prepQuiz('science')">Science</button>
+    <button class="geography-btn" onclick="prepQuiz('geography')">Geography</button>
+    <button class="general-btn" onclick="prepQuiz('general')">General Knowledge</button>
+    <button class="am-btn" onclick="prepQuiz('animemanga')">Anime/Manga</button>
+    </div>
+
+    <div class="quiz containerquiz" id="history"> <!--2 css class labels "quiz" and "container quiz"-->
+        <h1>History Quiz</h1>
+        <div id="questionhis"></div>
+        <div id="choiceshis"></div>
+        <div id="resulthis"></div>
+        <button id="back-btn" onclick="goHome()">Back</button>
+    </div>
+    
     <div class="quiz containerquiz" id="math"> <!--2 css class labels "quiz and "container quiz" -->
         <h1>Math Quiz</h1>
         <div id="questionmath"></div>
@@ -33,5 +44,30 @@
         <button id="back-btn" onclick="goHome()">Back</button>
     </div>
 
+    <div class="quiz containerquiz" id="geography"> <!--2 css class labels "quiz" and "container quiz"-->
+        <h1>Geography Quiz</h1>
+        <div id="questiongeo"></div>
+        <div id="choicesgeo"></div>
+        <div id="resultgeo"></div>
+        <button id="back-btn" onclick="goHome()">Back</button>
+    </div>
+
+    <div class="quiz containerquiz" id="general"> <!--2 css class labels "quiz" and "container quiz"-->
+        <h1>General Knowledge Quiz</h1>
+        <div id="questiongen"></div>
+        <div id="choicesgen"></div>
+        <div id="resultgen"></div>
+        <button id="back-btn" onclick="goHome()">Back</button>
+    </div>
+
+    <div class="quiz containerquiz" id="animemanga"> <!--2 css class labels "quiz" and "container quiz"-->
+        <h1>Anime/Manga Quiz</h1>
+        <div id="questionam"></div>
+        <div id="choicesam"></div>
+        <div id="resultam"></div>
+        <button id="back-btn" onclick="goHome()">Back</button>
+    </div>
+
+<script src="script.js"></script>
 </body>
 </html>
