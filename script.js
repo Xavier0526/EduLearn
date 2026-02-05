@@ -1,3 +1,12 @@
+// Home 
+function toggleMenu() {
+    const nav = document.getElementById("sideNav");
+    const overlay = document.getElementById("overlay");
+    nav.classList.toggle("open");
+    overlay.classList.toggle("show");
+}
+
+// Quiz
 function findQuiz(quizId) {
     document.querySelectorAll(".quiz").forEach(quiz => {
         quiz.classList.remove("current");

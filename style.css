@@ -1,3 +1,225 @@
+/* Home */
+
+html, body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #545454;
+    background-color: #DDEFFF;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* menu & close buttons */
+.menu-btn, .close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.menu-btn img, .close-btn img {
+    height: 22px;
+    width: 22px;
+    object-fit: contain;
+}
+
+.profile {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.side-nav {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    gap: 15px;
+    top: 0;
+    left: -250px;
+    height: 98vh;
+    width: 230px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.09);
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.logo {
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Sidebar links */
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #545454;
+    font-weight: 500;
+}
+
+.nav-link img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    transition: filter 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: #f2f8ff;
+}
+
+.nav-link.active {
+    background-color: #00E66D;
+    color: white;
+}
+
+.nav-link.active img {
+    filter: brightness(0) invert(1);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 900;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.layout {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+}
+
+.card {
+    background-color:#ffffffa8;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.card .icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 70px;
+}
+
+.text {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Buttons */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:'Quicksand', sans-serif;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #545454;
+    box-shadow: 0 3px 0;
+}
+
+.btn img {
+    width: 18px;
+    height: 18px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn.pink {
+    background-color: #FF8FDD;
+    box-shadow: 0 3px 0 #B10099;
+}
+
+.btn.yellow {
+    background-color: #F3D700;
+    box-shadow: 0 3px 0 #CF9101;
+}
+
+.btn.blue {
+    background-color: #00C3FF;
+    box-shadow: 0 3px 0 #009CB4;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+    }
+}
+
+
+
+/* Quiz */
+
 .contents {
     font-family: "Quicksand", sans-serif;
     align-items: center;
@@ -5,6 +227,7 @@
     display: flex;
     width: 100%;
 }
+
 
 body {
     font-family: "Quicksand", sans-serif;
@@ -284,3 +507,4 @@ h1 {
 #quizzespage {
     gap:20px;
 }
+

@@ -3,20 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eduLearn</title>
+    <title>eduLearn - Home</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
 </head>
 <body>
 
-    <div class="header">
-        <div class="contents">
-            <a href="">Home</a>
-            <a href="">Planner</a>
-            <a href="quiz.html">Quiz</a>
-            <a href="">More</a>
+    <header class="top-bar"> <!--Header-->
+        <div class="header-left">
+            <button class="menu-btn"><img src="assets/menu.png" alt="Menu"></button>
+            <h1>eduLearn</h1>
         </div>
-    </div>
-    
+        <img src="#" class="profile" alt="Profile">
+    </header>
+
+    <nav class="side-nav"> <!--Hamburger-->
+        <button class="close-btn"><img src="assets/cross.png" alt="X"></button>
+        <h3 class="logo">eduLearn</h3>
+
+        <a class="nav-link active">
+            <img src="assets/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+
+        <a class="nav-link">
+            <img src="assets/time.png" alt="Time Management">
+            <span>Time Management</span>
+        </a>
+
+        <a class="nav-link" href="quiz.html">
+            <img src="assets/quiz.png" alt="Quiz">
+            <span>Quiz</span>
+        </a>
+
+        <a class="nav-link">
+            <img src="assets/more.png" alt="More">
+            <span>More</span>
+        </a>
+    </nav>
+
+    <div class="overlay"></div> <!--Shadow across the page when hamburger menu is open-->
+
+    <!--Recently Visited & Quick Actions-->
+    <main class="layout">
+        <section class="left">
+            <h2>Recently Visited</h2>
+            <div class="card">
+                <div class="icon"><img src="assets/recent.png" alt="Recent"></div>
+                <p class="title">Nothing to show yet</p>
+                <p class="text">Your recently viewed pages will appear here</p>
+            </div>
+        </section>
+
+        <section class="right">
+            <h2>Things To Do</h2>
+
+        <div class="actions">
+            <button class="btn pink">
+                Test Your Knowledge
+                <img src="assets/arrow.png" alt="Arrow">
+            </button>
+
+            <button class="btn yellow">
+                In Progress Work
+                <img src="assets/arrow.png" alt="Arrow">
+            </button>
+            
+            <button class="btn blue">
+                Rewards
+                <img src="assets/arrow.png" alt="Arrow">
+            </button>
+        </div>
+    </section>
+
+    </main>
+
+    <!--JS-->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        const sideNav = document.querySelector('.side-nav');
+        const overlay = document.querySelector('.overlay');
+
+        const toggleMenu = () => {
+            sideNav.classList.toggle('open');
+            overlay.classList.toggle('show');
+        };
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
+
 </body>
 </html>
