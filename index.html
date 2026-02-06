@@ -3,20 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eduLearn</title>
+    <title>eduLearn - Home</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="header">
-        <div class="contents">
-            <a href="">Home</a>
-            <a href="">Planner</a>
-            <a href="">Quiz</a>
-            <a href="">More</a>
+    <header class="top-bar"> <!--Header-->
+        <div class="header-left">
+            <button class="menu-btn"><img src="assets/menu.png" alt="Menu"></button>
+            <h1>eduLearn</h1>
         </div>
-    </div>
+        <img src="#" class="profile" alt="Profile">
+    </header>
+
+    <nav class="side-nav"> <!--Hamburger-->
+        <button class="close-btn"><img src="assets/cross.png" alt="X"></button>
+        <h3 class="logo">eduLearn</h3>
+
+        <a class="nav-link active">
+            <img src="assets/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+
+        <a class="nav-link">
+            <img src="assets/time.png" alt="Time Management">
+            <span>Time Management</span>
+        </a>
+
+        <a class="nav-link" href="quiz.html">
+            <img src="assets/quiz.png" alt="Quiz">
+            <span>Quiz</span>
+        </a>
+
+        <a class="nav-link">
+            <img src="assets/more.png" alt="More">
+            <span>More</span>
+        </a>
+    </nav>
+
+    <div class="overlay"></div> <!--Shadow across the page when hamburger menu is open-->
+
+        <!--Image infinite slider-->
+      <!-- <div class="slider" reverse="true" style="
+    --width: 100px;
+    --height: 100px;
+    --quantity: 7;
+    ">
+        <div class="list">
+            <div class="item" style="--position: 1"><img src="assets/img1.png" alt="img1"></div>
+            <div class="item" style="--position: 2"><img src="assets/img2.png" alt="img2"></div>
+            <div class="item" style="--position: 3"><img src="assets/img3.png" alt="img3"></div>
+            <div class="item" style="--position: 4"><img src="assets/img4.png" alt="img4"></div>
+            <div class="item" style="--position: 5"><img src="assets/img5.png" alt="img5"></div>
+            <div class="item" style="--position: 6"><img src="assets/img6.png" alt="img6"></div>
+            <div class="item" style="--position: 7"><img src="assets/img7.png" alt="img7"></div>
+        </div>
+    </div> -->
     
+
+    <!--Recently Visited & Quick Actions-->
+    <main class="layout">
+        <section class="left">
+            <h2>Recently Visited</h2>
+            <div class="recentcard">
+                <div class="icon"><img src="assets/recent.png" alt="Recent"></div>
+                <p class="title">Nothing to show yet</p>
+                <p class="text">Your recently viewed pages will appear here</p>
+            </div>
+        </section>
+
+        <section class="right">
+            <h2>Things To Do</h2>
+
+        <div class="actions">
+            <button class="btn pink">
+                Test Your Knowledge
+                <img src="assets/arrow.png" alt="Arrow">
+            </button>
+
+            <button class="btn yellow">
+                In Progress Work
+                <img src="assets/arrow.png" alt="Arrow">
+            </button>
+            
+            <button class="btn blue">
+                Rewards
+                <img src="assets/arrow.png" alt="Arrow">
+            </button>
+        </div>
+    </section>
+
+    </main>
+
+    <!--Feedback card slider-->
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+            <li class="card">
+                <div class="imgprofile"><img src="assets/profile1.jpg" alt="img" draggable="false"></div>
+                <h2>Timmy Berg</h2>
+                <span>I love your quizzes, its so fun!</span>
+            </li>
+
+            <li class="card">
+                <div class="imgprofile"><img src="assets/profile2.jpg" alt="img" draggable="false"></div>
+                <h2>John Beckket</h2>
+                <span>I learned alot from the quizzes!</span>
+            </li>
+
+            <li class="card">
+                <div class="imgprofile"><img src="assets/profile3.jpg" alt="img" draggable="false"></div>
+                <h2>Ace Beckham</h2>
+                <span>EduLearn is super useful!</span>
+            </li>
+
+            <li class="card">
+                <div class="imgprofile"><img src="assets/profile4.jpg" alt="img" draggable="false"></div>
+                <h2>Marry Garcia</h2>
+                <span>Manage to get things done early!</span>
+            </li>
+
+            <li class="card">
+                <div class="imgprofile"><img src="assets/profile5.jpg" alt="img" draggable="false"></div>
+                <h2>Sally Smith</h2>
+                <span>Managing my work feels fun!</span>
+            </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+
+    <!--Partners infinite slider-->
+        <div class="slider" style="
+    --width: 100px;
+    --height: 50px;
+    --quantity: 3;
+    ">
+        <div class="list">
+            <div class="item" style="--position: 1"><img src="assets/logo1.png" alt="Gegenfeld"></div>
+            <div class="item" style="--position: 2"><img src="assets/logo2.png" alt="PSL"></div>
+            <div class="item" style="--position: 3"><img src="assets/logo3.png" alt="Perculus"></div>
+        </div>
+    </div> 
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
