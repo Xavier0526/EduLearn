@@ -4,160 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feedback</title>
-  <link rel="stylesheet" href="feedbackstyle.css" />
 
 
-
-
+  <link rel="stylesheet" href="main.css" />
 </head>
 
-<body>
-  <!-- HEADER -->
+<body class="page-feedback">
+
 <div class="topbar">
   <button class="back" type="button" onclick="history.back()">←</button>
 
-  <div class="headText">
-    <div class="title">Feedback</div>
-  </div>
+  <div class="title">Feedback</div>
 
   <a href="profile.html" class="avatar">
-  <img src="profile.jpg" alt="Profile" />
-</a>
+    <img src="profile.jpg" alt="Profile" />
+  </a>
+</div>
+
+<div class="wrap">
+  <div class="form-area">
+
+    <form id="feedbackForm" novalidate>
+
+      <div class="field">
+        <div class="label">Email</div>
+        <input class="input" id="email" type="email" required />
+      </div>
+
+      <div class="field">
+        <div class="label">Subject</div>
+        <input class="input" id="subject" type="text" required />
+      </div>
+
+      <div class="field">
+        <div class="label">Type of Issue</div>
+        <select class="select" id="issueType" required>
+          <option value="" selected disabled></option>
+          <option>Bug / Feature not working</option>
+          <option>Account / Login</option>
+          <option>Rewards / Points</option>
+          <option>Suggestion / Improvement</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <div class="label">Description</div>
+        <textarea class="textarea" id="description" required></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="openConfirmBtn" type="button">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay">
+
+  <div class="bubble" id="confirmBubble">
+    <h3>Confirm Submission</h3>
+    <p>Are you sure you want to submit this form?</p>
+
+    <button class="bubble-btn" id="confirmSubmitBtn" type="button">Submit</button>
+    <button class="bubble-link" id="goBackBtn" type="button">Go Back</button>
+  </div>
+
+  <div class="bubble" id="thankBubble">
+    <h3>Thank You!</h3>
+    <p>Thanks for submitting! We’ve received your form and will get back to you shortly.</p>
+    <button class="bubble-link" id="backHomeBtn" type="button">Back</button>
+  </div>
 
 </div>
 
+<script>
+const form = document.getElementById("feedbackForm");
+const openConfirmBtn = document.getElementById("openConfirmBtn");
 
-  <div class="wrap">
-    <div class="form-area">
+const overlay = document.getElementById("overlay");
+const confirmBubble = document.getElementById("confirmBubble");
+const thankBubble = document.getElementById("thankBubble");
 
-      <form id="feedbackForm" novalidate>
-        <div class="field">
-          <div class="label">Email</div>
-          <input class="input" id="email" type="email" required />
-        </div>
+const goBackBtn = document.getElementById("goBackBtn");
+const confirmSubmitBtn = document.getElementById("confirmSubmitBtn");
+const backHomeBtn = document.getElementById("backHomeBtn");
 
-        <div class="field">
-          <div class="label">Subject</div>
-          <input class="input" id="subject" type="text" required />
-        </div>
+function isValid(){
+  const ok = form.checkValidity();
+  if(!ok) form.reportValidity();
+  return ok;
+}
 
-        <div class="field">
-          <div class="label">Type of Issue</div>
-          <select class="select" id="issueType" required>
-            <option value="" selected disabled></option>
-            <option>Bug / Feature not working</option>
-            <option>Account / Login</option>
-            <option>Rewards / Points</option>
-            <option>Suggestion / Improvement</option>
-            <option>Other</option>
-          </select>
-        </div>
+function openOverlay(which){
+  overlay.classList.add("show");
+  confirmBubble.classList.remove("show");
+  thankBubble.classList.remove("show");
 
-        <div class="field">
-          <div class="label">Description</div>
-          <textarea class="textarea" id="description" required></textarea>
-        </div>
+  if(which==="confirm") confirmBubble.classList.add("show");
+  if(which==="thank") thankBubble.classList.add("show");
+}
 
-        <div class="actions">
-          <button class="btn" id="openConfirmBtn" type="button">Submit</button>
-        </div>
-      </form>
+function closeOverlay(){
+  overlay.classList.remove("show");
+  confirmBubble.classList.remove("show");
+  thankBubble.classList.remove("show");
+}
 
-    </div>
-  </div>
+openConfirmBtn.onclick = ()=>{
+  if(isValid()) openOverlay("confirm");
+};
 
-  
-  <div class="overlay" id="overlay" aria-hidden="true">
-    <!-- Confirm bubble -->
-    <div class="bubble" id="confirmBubble" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
-      <h3 id="confirmTitle">Confirm Submission</h3>
-      <p>Are you sure you want to submit this form?</p>
+goBackBtn.onclick = closeOverlay;
 
-      <button class="bubble-btn" id="confirmSubmitBtn" type="button">Submit</button>
-      <button class="bubble-link" id="goBackBtn" type="button">Go Back</button>
-    </div>
+confirmSubmitBtn.onclick = ()=>{
+  openOverlay("thank");
+  form.reset();
+};
 
-    <!-- Thank you bubble -->
-    <div class="bubble" id="thankBubble" role="dialog" aria-modal="true" aria-labelledby="thankTitle">
-      <h3 id="thankTitle">Thank You!</h3>
-      <p>Thanks for submitting! We’ve received your form and will get back to you shortly.</p>
+backHomeBtn.onclick = closeOverlay;
 
-      <button class="bubble-link" id="backHomeBtn" type="button">Back to Home</button>
-    </div>
-  </div>
+overlay.onclick = e=>{
+  if(e.target===overlay) closeOverlay();
+};
 
-  <!-- =========================
-       JS (SCRIPT)
-  ========================= -->
-  <script>
-    const form = document.getElementById("feedbackForm");
-    const openConfirmBtn = document.getElementById("openConfirmBtn");
+window.onkeydown = e=>{
+  if(e.key==="Escape") closeOverlay();
+};
+</script>
 
-    const overlay = document.getElementById("overlay");
-
-    const confirmBubble = document.getElementById("confirmBubble");
-    const thankBubble = document.getElementById("thankBubble");
-
-    const goBackBtn = document.getElementById("goBackBtn");
-    const confirmSubmitBtn = document.getElementById("confirmSubmitBtn");
-    const backHomeBtn = document.getElementById("backHomeBtn");
-
-    function isValid() {
-      const ok = form.checkValidity();
-      if (!ok) form.reportValidity();
-      return ok;
-    }
-
-    function openOverlay(which) {
-      overlay.classList.add("show");
-      overlay.setAttribute("aria-hidden", "false");
-
-      confirmBubble.classList.remove("show");
-      thankBubble.classList.remove("show");
-
-      if (which === "confirm") confirmBubble.classList.add("show");
-      if (which === "thank") thankBubble.classList.add("show");
-    }
-
-    function closeOverlay() {
-      overlay.classList.remove("show");
-      overlay.setAttribute("aria-hidden", "true");
-      confirmBubble.classList.remove("show");
-      thankBubble.classList.remove("show");
-    }
-
-    openConfirmBtn.addEventListener("click", () => {
-      if (isValid()) openOverlay("confirm");
-    });
-
-    goBackBtn.addEventListener("click", () => {
-      closeOverlay();
-    });
-
-    confirmSubmitBtn.addEventListener("click", () => {
-      // TODO: send your form using fetch/ajax here if needed
-
-      // Show thank-you bubble (same page)
-      openOverlay("thank");
-
-      // Optional: reset fields after submit
-      form.reset();
-    });
-
-    backHomeBtn.addEventListener("click", () => {
-      closeOverlay();
-    });
-
-    // Click outside bubble to close overlay
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) closeOverlay();
-    });
-
-    // ESC to close
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && overlay.classList.contains("show")) closeOverlay();
-    });
-    const backBtn = document.getElementById("backBtn");
-  </script>
 </body>
 </html>
