@@ -1,41 +1,39 @@
-
-
-/* =========================
-   GLOBAL TOKENS + RESET
-========================= */
 :root{
-  --bg1:#cfd8df;
-  --bg2:#c5d0d7;
-  --text:#3a3a3a;
+  --text:#545454;
 
-  --field-bg:#dbe7f0;
-  --stroke:#6c6c6c;
+  --stroke:#545454;
 
   --bubble-bg:#e8f4ff;
-  --bubble-stroke:#6c6c6c;
+  --bubble-stroke:#545454;
 
   --panel:#dbe7f0;
   --card:#dbe7f0;
 
   --nav:#25d46b;
-  --btn:#dbe7f0;
 
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+  --font: "Quicksand";
 }
 
-*{ box-sizing:border-box; }
+*{ box-sizing:border-box;
+}
+
+html, body, input, button, textarea, select {
+  font-family:"Quicksand", sans-serif ;
+}
+
+.input, textarea, select {
+  font-weight: bold;
+}
 
 body{
   margin:0;
   min-height:100vh;
   font-family:var(--font);
   color:var(--text);
-  background:linear-gradient(180deg,var(--bg1),var(--bg2));
+  background: #DDEFFF;
 }
 
-/* =========================
-   SHARED HEADER (most pages)
-========================= */
+/* Header */
 .topbar{
   display:flex;
   align-items:center;
@@ -43,7 +41,7 @@ body{
   padding:22px 26px 10px;
 }
 
-/* back arrow: no circle, thicker */
+/* Back arrow: no circle, thicker */
 .back{
   background:none;
   border:none;
@@ -53,6 +51,11 @@ body{
   font-weight:1000;
   color:var(--text);
   line-height:1;
+}
+
+.back img{
+  width: 30px;
+  display: block;
 }
 
 .title{
@@ -68,7 +71,6 @@ body{
   height:44px;
   border-radius:50%;
   overflow:hidden;
-  border:2px solid var(--stroke);
 }
 
 .avatar img{
@@ -78,9 +80,13 @@ body{
   display:block;
 }
 
-/* =========================
-   SHARED FORM CONTROLS
-========================= */
+/* Arrow in buttons (More Page)*/
+.arrow {
+  width: 30px;
+  display: block;
+}
+
+/* Shared form controls */
 .field{ margin:18px 0; }
 
 .label{
@@ -110,7 +116,7 @@ body{
   box-shadow:0 0 0 4px rgba(108,108,108,.20);
 }
 
-/* dropdown caret */
+/* Dropdown cart */
 .select{
   appearance:none;
   padding-right:44px;
@@ -131,7 +137,7 @@ select option{
 }
 select option:disabled{ color: rgba(58,58,58,.55); }
 
-/* shared pill button */
+/* Shared pill button */
 .btn{
   border:2px solid var(--stroke);
   cursor:pointer;
@@ -140,25 +146,23 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   padding:12px 44px;
   font-size:16px;
   color:var(--text);
-  background:linear-gradient(180deg,#e6eef3 0%, #d3dde4 100%);
+  background: #EBF300;
   box-shadow:0 5px 0 rgba(0,0,0,.25);
   transition:.15s ease;
 }
 .btn:hover{ transform:translateY(-1px); }
 .btn:active{ transform:translateY(1px); box-shadow:0 3px 0 rgba(0,0,0,.25); }
 
-/* =========================
-   OVERLAY + BUBBLES (feedback/contact)
-========================= */
+/* Overlay + Bubbles (feedback/contact) */
 .overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.18);
   display:none;
   align-items:center;
   justify-content:center;
   padding:22px;
   z-index:10;
+  background:rgba(50, 143, 237, 0.18);
 }
 .overlay.show{ display:flex; }
 
@@ -169,7 +173,6 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   border:2px solid var(--bubble-stroke);
   padding:18px 16px 14px;
   text-align:center;
-  box-shadow:0 6px 0 rgba(0,0,0,.20);
   display:none;
   color:var(--text);
 }
@@ -185,7 +188,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   margin:0 0 12px;
   font-size:13px;
   line-height:1.35;
-  color:#4a4a4a;
+  color:#545454;
 }
 
 .bubble-btn{
@@ -196,7 +199,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   padding:10px 28px;
   font-size:14px;
   color:var(--text);
-  background:linear-gradient(180deg,#e6eef3 0%, #d3dde4 100%);
+  background: #EBF300;
   box-shadow:0 4px 0 rgba(0,0,0,.22);
 }
 
@@ -205,16 +208,14 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   margin:10px auto 0;
   background:none;
   border:none;
-  color:#4a4a4a;
+  color:#545454;
   text-decoration:underline;
   cursor:pointer;
   font-weight:800;
   font-size:12px;
 }
 
-/* =========================================================
-   PAGE: FEEDBACK
-========================================================= */
+/* Feedback Page */
 .page-feedback .wrap{
   width:100%;
   min-height:100vh;
@@ -233,9 +234,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   justify-content:center;
 }
 
-/* =========================================================
-   PAGE: CONTACT
-========================================================= */
+/* Contact Page */
 .page-contact .wrap{
   padding: 0 60px 70px;
   max-width: 1100px;
@@ -273,9 +272,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   padding:12px 40px;
 }
 
-/* =========================================================
-   PAGE: SUPPORT (FAQ)
-========================================================= */
+/* Support FAQ Page */
 .page-support .wrap{
   max-width:980px;
   margin:0 auto;
@@ -304,7 +301,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
 
 .page-support .a{
   margin:0;
-  color:#4a4a4a;
+  color:#545454;
   line-height:1.45;
 }
 
@@ -325,9 +322,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
 
 .page-support .btn-link{ text-decoration:none; }
 
-/* =========================================================
-   PAGE: POLICY
-========================================================= */
+/* Policy Page */
 .page-policy .wrap{
   max-width:900px;
   margin:0 auto;
@@ -345,12 +340,10 @@ select option:disabled{ color: rgba(58,58,58,.55); }
 .page-policy p{
   margin:0 0 14px;
   line-height:1.45;
-  color:#4a4a4a;
+  color:#545454;
 }
 
-/* =========================================================
-   PAGE: ABOUT
-========================================================= */
+/* About Page */
 .page-about .wrap{
   max-width:980px;
   margin:0 auto;
@@ -369,9 +362,9 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   width:100%;
   border-radius:18px;
   overflow:hidden;
-  border:2px solid rgba(0,0,0,.18);
+  border:2px solid #545454;
   box-shadow:0 6px 0 rgba(0,0,0,.18);
-  background:#fff;
+  background:white;
 }
 
 .page-about .hero img{
@@ -387,9 +380,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   color:#4a4a4a;
 }
 
-/* =========================================================
-   PAGE: SETTINGS
-========================================================= */
+/* Setting Page */
 .page-settings .wrap{
   max-width:900px;
   margin:auto;
@@ -446,7 +437,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   background:white;
   border-radius:50%;
   transition:.2s;
-  box-shadow:0 2px 4px rgba(0,0,0,.2);
+  box-shadow:0 2px 4px rgba(0,0,0,0.2);
 }
 
 .switch input:checked + .slider{
@@ -457,9 +448,8 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   transform:translateX(22px);
 }
 
-/* =========================================================
-   PAGE: UPDATES
-========================================================= */
+/* Update */
+
 .page-updates .wrap{
   max-width:980px;
   margin:0 auto;
@@ -518,16 +508,14 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   line-height:1.35;
 }
 
-/* =========================================================
-   PAGE: MORE
-========================================================= */
+/* More Page */
 .page-more .wrap{
   max-width:100%;
   margin:0 auto;
   padding: 22px 18px 40px;
 }
 
-/* profile section */
+/* Profile section */
 .page-more .profile{
   text-align:center;
   margin-top:16px;
@@ -555,7 +543,7 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   opacity:.85;
 }
 
-/* list buttons */
+/* List buttons */
 .page-more .list{
   margin-top:18px;
   display:flex;
