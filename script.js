@@ -1,19 +1,27 @@
-// Home 
+// Home Page
+
+if (document.querySelector('.menu-btn')) {
+
 const menuBtn = document.querySelector('.menu-btn');
 const closeBtn = document.querySelector('.close-btn');
 const sideNav = document.querySelector('.side-nav');
-const overlay = document.querySelector('.overlay');
+const overlayHome = document.querySelector('.overlay');
 
 const toggleMenu = () => {
     sideNav.classList.toggle('open');
-    overlay.classList.toggle('show');
+    overlayHome.classList.toggle('show');
 };
 
 menuBtn.addEventListener('click', toggleMenu);
 closeBtn.addEventListener('click', toggleMenu);
-overlay.addEventListener('click', toggleMenu);
+overlayHome.addEventListener('click', toggleMenu);
+
+}
 
 // Feedback slider
+
+if (document.querySelector(".carousel")) {
+
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const arrowBtns = document.querySelectorAll(".wrapper i");
@@ -91,3 +99,64 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 carousel.addEventListener("mouseleave", autoPlay); // Mouse leave autoplay resume
+
+}
+
+// Feedback Page
+
+if (document.getElementById("feedbackForm")) {
+
+const form = document.getElementById("feedbackForm");
+const openConfirmBtn = document.getElementById("openConfirmBtn");
+
+const overlayFeedback = document.getElementById("overlay");
+const confirmBubble = document.getElementById("confirmBubble");
+const thankBubble = document.getElementById("thankBubble");
+
+const goBackBtn = document.getElementById("goBackBtn");
+const confirmSubmitBtn = document.getElementById("confirmSubmitBtn");
+const backHomeBtn = document.getElementById("backHomeBtn");
+
+function isValid(){
+  const ok = form.checkValidity();
+  if(!ok) form.reportValidity();
+  return ok;
+}
+
+function openOverlay(which){
+  overlayFeedback.classList.add("show");
+  confirmBubble.classList.remove("show");
+  thankBubble.classList.remove("show");
+
+  if(which === "confirm") confirmBubble.classList.add("show");
+  if(which === "thank") thankBubble.classList.add("show");
+}
+
+function closeOverlay(){
+  overlayFeedback.classList.remove("show");
+  confirmBubble.classList.remove("show");
+  thankBubble.classList.remove("show");
+}
+
+openConfirmBtn.onclick = ()=>{
+  if(isValid()) openOverlay("confirm");
+};
+
+goBackBtn.onclick = closeOverlay;
+
+confirmSubmitBtn.onclick = ()=>{
+  openOverlay("thank");
+  form.reset();
+};
+
+backHomeBtn.onclick = closeOverlay;
+
+overlayFeedback.onclick = e => {
+  if(e.target === overlay) closeOverlay();
+};
+
+window.onkeydown = e => {
+  if(e.key === "Escape") closeOverlay();
+};
+
+}

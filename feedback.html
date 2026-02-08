@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feedback</title>
-
-
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="feedbackstyle.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
 </head>
 
 <body class="page-feedback">
 
 <div class="topbar">
-  <button class="back" type="button" onclick="history.back()">←</button>
+  <button class="back" type="button" onclick="history.back()"><img src="assets/arrowback.png" alt="back"></button>
 
   <div class="title">Feedback</div>
 
   <a href="profile.html" class="avatar">
-    <img src="profile.jpg" alt="Profile" />
+    <img src="assets/userprofile.jpg" alt="Profile" />
   </a>
 </div>
 
@@ -56,13 +55,11 @@
       <div class="actions">
         <button class="btn" id="openConfirmBtn" type="button">Submit</button>
       </div>
-
     </form>
-
   </div>
 </div>
 
-<!-- OVERLAY -->
+<!-- Overlay -->
 <div class="overlay" id="overlay">
 
   <div class="bubble" id="confirmBubble">
@@ -75,66 +72,12 @@
 
   <div class="bubble" id="thankBubble">
     <h3>Thank You!</h3>
-    <p>Thanks for submitting! We’ve received your form and will get back to you shortly.</p>
+    <p>Thanks for submitting! We received your form and will get back to you shortly.</p>
     <button class="bubble-link" id="backHomeBtn" type="button">Back</button>
   </div>
-
 </div>
 
-<script>
-const form = document.getElementById("feedbackForm");
-const openConfirmBtn = document.getElementById("openConfirmBtn");
 
-const overlay = document.getElementById("overlay");
-const confirmBubble = document.getElementById("confirmBubble");
-const thankBubble = document.getElementById("thankBubble");
-
-const goBackBtn = document.getElementById("goBackBtn");
-const confirmSubmitBtn = document.getElementById("confirmSubmitBtn");
-const backHomeBtn = document.getElementById("backHomeBtn");
-
-function isValid(){
-  const ok = form.checkValidity();
-  if(!ok) form.reportValidity();
-  return ok;
-}
-
-function openOverlay(which){
-  overlay.classList.add("show");
-  confirmBubble.classList.remove("show");
-  thankBubble.classList.remove("show");
-
-  if(which==="confirm") confirmBubble.classList.add("show");
-  if(which==="thank") thankBubble.classList.add("show");
-}
-
-function closeOverlay(){
-  overlay.classList.remove("show");
-  confirmBubble.classList.remove("show");
-  thankBubble.classList.remove("show");
-}
-
-openConfirmBtn.onclick = ()=>{
-  if(isValid()) openOverlay("confirm");
-};
-
-goBackBtn.onclick = closeOverlay;
-
-confirmSubmitBtn.onclick = ()=>{
-  openOverlay("thank");
-  form.reset();
-};
-
-backHomeBtn.onclick = closeOverlay;
-
-overlay.onclick = e=>{
-  if(e.target===overlay) closeOverlay();
-};
-
-window.onkeydown = e=>{
-  if(e.key==="Escape") closeOverlay();
-};
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
