@@ -1,25 +1,26 @@
-// Login Process when clicked Login button
-
 $(function () {
 
   const API_KEY = "69804ee3bf4bcc1e0853e428";
   const DB_NAME = "login-94a6"; // Database name
   const DB_URL = `https://login-94a6.restdb.io/rest/customer`;
 
+  // Login Process when clicked Login button
+  
   $("#login-form").on("submit", function (e) {
 
     e.preventDefault();
 
-    const email = $("#li-email").val();
+    const username = $("#li-username").val();
     const password = $("#li-password").val();
 
     $.ajax({
 
       url: DB_URL + "?q=" + encodeURIComponent(
-        JSON.stringify({ email: email })
+        JSON.stringify({ username: username })
       ),
 
       method: "GET",
+
       headers: {
         "x-apikey": API_KEY
       },
@@ -27,7 +28,7 @@ $(function () {
       success: function (res) {
 
         if (res.length === 0) {
-          alert("User not found ");
+          alert("User not found");
           return;
         }
 
@@ -46,19 +47,11 @@ $(function () {
       error: function () {
         alert("Login failed");
       }
-
     });
   });
-});
 
 
-// Register
-
-$(function () {
-
-  const API_KEY = "69804ee3bf4bcc1e0853e428";
-  const DB_URL = `https://login-94a6.restdb.io/rest/customer`;
-
+// Register (Sign up)
 
   $("#register-form").on("submit", function (e) {
 
@@ -103,6 +96,7 @@ $(function () {
       }
     });
   });
+
 });
 
 
