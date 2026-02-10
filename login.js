@@ -190,3 +190,74 @@ function resetPassword(e) {
 
 
 });
+
+// Edit Profile
+
+// Retrieve user info from localStorage
+const USER_ID =localStorage.getItem("userId");
+
+// Retrieve DOM Elements
+const usernameInput = document.getElementById("username");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const avatarPreview = document.getElementById("avatarPreview");
+const saveBtn = document.getElementById("saveBtn");
+
+if (usernameInput && emailInput && passwordInput && saveBtn) {
+  if(!USER_ID) {
+    window.location.href="login.html";
+  }
+}
+
+// Required or it wont load
+  const API_KEY = "69804ee3bf4bcc1e0853e428";
+  const DB_URL = `https://login-94a6.restdb.io/rest/customer`;
+
+// Load user profile in page
+function loadProfile() {
+  fetch(`${DB_URL}/${USER_ID}`, {
+    headers: {"x-apikey": API_KEY}
+  })
+  .then(res => res.json())
+  .then(user => {
+    usernameInput.value = user.username || "";
+    emailInput.value = user.email || "";
+    passwordInput.value = user.password || "";
+  })
+}
+
+loadProfile();
+
+// Saving changes to the profile
+saveBtn.addEventListener("click", () => {
+  const username = usernameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+  /*const avatar = avatarPreview.src;*/
+
+  if (!username || !email || !password) {
+    alert("Please fill in all fields");
+    return;
+  }
+
+  fetch(`${DB_URL}/${USER_ID}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "x-apikey": API_KEY
+    },
+    body: JSON.stringify({ username, email, password})
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert("Updated profile successfully!");
+    console.log("Updated profile:", data);
+  })
+  .catch(err => {
+    console.error("Error updating profile:", err);
+    alert("Update profile Failed");
+  });
+});
+
+
+

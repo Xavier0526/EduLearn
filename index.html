@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eduLearn - Home</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand"> <!-- Font Quicksand -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!--Arrow at footer-->
     <!--<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>-->
 </head>
@@ -14,16 +14,16 @@
     <header class="top-bar"> <!--Header-->
         <div class="header-left">
             <button class="menu-btn"><img src="assets/menu.png" alt="Menu"></button>
-            <a href="index.html"><button class="edulearn"><img src="assets/logo.png" alt="Logo"></button></a>       
+            <a href="index.html" class="edulearn"><img src="assets/logo.png" alt="Logo"></a>       
         </div>
-        <img src="assets/userprofile.jpg" class="profile" alt="Profile">
+        <a href="userprofile.html"><img src="assets/userprofile.jpg" class="profile" alt="Profile"></a>
     </header>
 
     <nav class="side-nav"> <!--Hamburger-->
         <button class="close-btn"><img src="assets/cross.png" alt="X"></button>
 
         <a href="index.html">
-            <img src="assets/logo.png" class="logo">
+            <img src="assets/logo.png" class="logo" alt="Logo">
         </a>
 
         <a class="nav-link active" href="index.html">
@@ -50,11 +50,7 @@
     <div class="overlay"></div> <!--Shadow across the page when hamburger menu is open-->
 
         <!--Image infinite slider-->
-      <div class="slider" reverse="true" style="
-    --width: 100px;
-    --height: 100px;
-    --quantity: 7;
-    ">
+      <div class="slider" data-reverse="true" style="--width: 100px; --height: 100px; --quantity: 7;">
         <div class="list">
             <div class="item" style="--position: 1"><img src="assets/img1.png" alt="img1"></div>
             <div class="item" style="--position: 2"><img src="assets/img2.png" alt="img2"></div>
@@ -92,7 +88,7 @@
                 <img src="assets/arrow.png" alt="Arrow">
             </button>
             
-            <button class="btn blue"  onclick="window.location.href=' '">
+            <button class="btn blue"  onclick="window.location.href='rewards.html'">
                 Rewards
                 <img src="assets/arrow.png" alt="Arrow">
             </button>
@@ -158,7 +154,7 @@
         </div> 
         <hr>
         <div class="col">
-            <img src="assets/logo.png" class="logo">
+            <img src="assets/logo.png" class="logo" alt="logo">
             <p>EduLearn is a platform for individuals to learn and manage their time well.
                 90% of the students here have manage their time well while
                 acing their subjects.

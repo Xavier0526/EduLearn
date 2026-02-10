@@ -101,7 +101,7 @@ function nextquestionhis(){
     if(currentquestionIndexhis < questionshis.length){
         displayquestionhis() // Display the next Qns if have
     } else {
-        alert(`Your Score: ${scorehis} / ${questionshis.length} \nCorrect: ${correcthis} Wrong: ${wronghis} \nTry Again?`);
+        alert(`Your Score: ${scorehis} / ${questionshis.length} \nCorrect: ${correcthis} Wrong: ${wronghis}\nPoint Earned: ${correcthis} \nTry Again?`);
         currentquestionIndexhis = 0; //Reset the question when new sets of quiz starts again
         scorehis = 0; // Reset the score when new sets of quiz starts
         correcthis = 0; // Reset correct questions when new sets of quiz starts
@@ -181,7 +181,7 @@ function nextquestionmath(){
     if(currentquestionIndexmath < questionsmath.length){
         displayquestionmath() // Display the next Qns if have
     } else {
-        alert(`Your Score: ${scoremath} / ${questionsmath.length} \nCorrect: ${correctmath} Wrong: ${wrongmath} \nTry Again?`);
+        alert(`Your Score: ${scoremath} / ${questionsmath.length} \nCorrect: ${correctmath} Wrong: ${wrongmath}\nPoint Earned: ${correctmath} \nTry Again?`);
         currentquestionIndexmath = 0; //Reset the question when new sets of quiz starts again
         scoremath = 0; // Reset the score when new sets of quiz starts
         correctmath = 0; // Reset correct questions when new sets of quiz starts
@@ -262,7 +262,7 @@ function nextquestionsci(){
     if(currentquestionIndexsci < questionssci.length){
         displayquestionsci() // Display the next Qns if have
     } else {
-        alert(`Your Score: ${scoresci} / ${questionssci.length} \nCorrect: ${correctsci} Wrong: ${wrongsci} \nTry Again?`);
+        alert(`Your Score: ${scoresci} / ${questionssci.length} \nCorrect: ${correctsci} Wrong: ${wrongsci}\nPoint Earned: ${correctsci} \nTry Again?`);
         currentquestionIndexsci = 0; //Reset the question when new sets of quiz starts again
         scoresci = 0; // Reset the score when new sets of quiz starts
         correctsci = 0; // Reset correct questions when new sets of quiz starts
@@ -344,7 +344,7 @@ function nextquestiongeo(){
     if(currentquestionIndexgeo < questionsgeo.length){
         displayquestiongeo() // Display the next Qns if have
     } else {
-        alert(`Your Score: ${scoregeo} / ${questionsgeo.length} \nCorrect: ${correctgeo} Wrong: ${wronggeo} \nTry Again?`);
+        alert(`Your Score: ${scoregeo} / ${questionsgeo.length} \nCorrect: ${correctgeo} Wrong: ${wronggeo}\nPoint Earned: ${correctgeo} \nTry Again?`);
         currentquestionIndexgeo = 0; //Reset the question when new sets of quiz starts again
         scoregeo = 0; // Reset the score when new sets of quiz starts
         correctgeo = 0; // Reset correct questions when new sets of quiz starts
@@ -425,7 +425,7 @@ function nextquestiongen(){
     if(currentquestionIndexgen < questionsgen.length){
         displayquestiongen() // Display the next Qns if have
     } else {
-        alert(`Your Score: ${scoregen} / ${questionsgen.length} \nCorrect: ${correctgen} Wrong: ${wronggen} \nTry Again?`);
+        alert(`Your Score: ${scoregen} / ${questionsgen.length} \nCorrect: ${correctgen} Wrong: ${wronggen}\nPoint Earned: ${correctgen} \nTry Again?`);
         currentquestionIndexgen = 0; //Reset the question when new sets of quiz starts again
         scoregen = 0; // Reset the score when new sets of quiz starts
         correctgen = 0; // Reset correct questions when new sets of quiz starts
@@ -506,7 +506,7 @@ function nextquestionam(){
     if(currentquestionIndexam < questionsam.length){
         displayquestionam() // Display the next Qns if have
     } else {
-        alert(`Your Score: ${scoream} / ${questionsam.length} \nCorrect: ${correctam} Wrong: ${wrongam} \nTry Again?`);
+        alert(`Your Score: ${scoream} / ${questionsam.length} \nCorrect: ${correctam} Wrong: ${wrongam}\nPoint Earned: ${correctam} \nTry Again?`);
         currentquestionIndexam = 0; //Reset the question when new sets of quiz starts again
         scoream = 0; // Reset the score when new sets of quiz starts
         correctam = 0; // Reset correct questions when new sets of quiz starts
