@@ -170,7 +170,6 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 const dueBox = document.getElementById("dueBox");
 const completedBox = document.getElementById("completedBox");
 
-
 function renderTasks() {
 
   dueBox.innerHTML = "";
@@ -184,18 +183,21 @@ function renderTasks() {
     div.draggable = true;
     div.dataset.index = index;
 
+    /* Format from Military Time to Normal Time */
+    const formattedTime = new Date(`1970-01-01T${task.endTime}`).toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'});
 
+    /* Task Appear in Drop Zone (Box)*/
     div.innerHTML = `
       <div class="task-header">
         <strong>${task.task}</strong>
-        <button class="delete-btn">✖</button>
+        <button class="delete-btn"><img class="crossred" src="assets/crossred.png" alt="cross"></button>
       </div>
 
-      <small>Due: ${task.endDate}</small>
+      <small>Due: ${task.endDate} ${formattedTime}</small>
     `;
 
 
-    /* DRAG START */
+    /* Drag Start */
     div.addEventListener("dragstart", function(e) {
 
       e.dataTransfer.setData("text/plain", index);
@@ -205,13 +207,13 @@ function renderTasks() {
     });
 
 
-    /* DRAG END */
+    /* Drag End */
     div.addEventListener("dragend", function() {
       this.classList.remove("dragging");
     });
 
 
-    /* DELETE */
+    /* Delete */
     div.querySelector(".delete-btn").addEventListener("click", function(e) {
 
       e.preventDefault();
@@ -236,7 +238,7 @@ function renderTasks() {
 }
 
 
-/* DROP ZONES */
+/* Drop zone */
 
 function setupDrop(box, status) {
 
@@ -306,9 +308,10 @@ form.addEventListener("submit", function(e) {
   const subject = document.getElementById("subjectInput").value;
   const task = document.getElementById("taskInput").value;
   const endDate = document.getElementById("endDate").value;
+  const endTime = document.getElementById("endTime").value;
 
   // Safety check
-  if (!task || !endDate) {
+  if (!task || !endDate || !endTime) {
     alert("Please complete all fields");
     return;
   }
@@ -317,6 +320,7 @@ form.addEventListener("submit", function(e) {
     subject: subject,
     task: task,
     endDate: endDate,
+    endTime: endTime,
     status: "due"
   };
 

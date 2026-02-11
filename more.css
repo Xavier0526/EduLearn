@@ -136,7 +136,8 @@ select option:disabled{ color: rgba(58,58,58,.55); }
 .btn{
   border:2px solid var(--stroke);
   cursor:pointer;
-  font-weight:900;
+  font-weight:bold;
+  text-decoration: none;
   border-radius:999px;
   padding:12px 44px;
   font-size:16px;
@@ -314,10 +315,6 @@ select option:disabled{ color: rgba(58,58,58,.55); }
   justify-content:center;
   flex-wrap:wrap;
 }
-
-/*.page-support .btn-link{ 
-  text-decoration:none;
- }*/
 
 /* Policy Page */
 .page-policy .wrap{

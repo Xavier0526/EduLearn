@@ -817,14 +817,6 @@ h1 {
 
 /* Time Management */
 
-/*.top-bar {
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}*/
-
-
 .goalsinfo {
   font-weight: bold;
   font-size: 18px;
@@ -845,6 +837,10 @@ h1 {
   padding: 50px;
   border-radius: 20px;
   text-align: center;
+}
+
+.crossred {
+  width: 20px;
 }
 
 .title {
@@ -874,30 +870,6 @@ h1 {
   }
 
 }
-
-/*.top-bar {
-  padding: 15px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}*/
-
-/*.profile {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}*/
-
-/*.back-btn {
-  font-size: 22px;
-  text-decoration: none;
-  color: #545454;
-  background: none;
-  border: none;
-  cursor: pointer;
-}*/
-
-
 
 /* Main Container */
 
