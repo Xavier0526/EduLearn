@@ -22,7 +22,9 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
 - Feature 13 - Allows user to log out after using finish the app
 
 # Technologies Used
-
+- [RestDB](https://restdb.io/)
+  
+  - The project uses RestDB for sign up, login, change password and save details in profile page
 
 # Assistive AI
 1. RestDB: ChatGPT was used to help with the login part to allow user login properly
