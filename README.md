@@ -31,11 +31,14 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
 # Testing
 1. Login Page:
    i. When login
+   
    ii. Try to login without username and password and verify that an error message about the required fields appears
+   
    iii. Try to login with invalid username and vwrify that a relevant error message appears
+   
    iv. Try to login with invalid password and verify that a relevant error message appears
 
-2. 
+3. 
 
 # Credits
 **Content**
