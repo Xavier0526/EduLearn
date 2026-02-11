@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rewards</title>
+    <title>Redeem</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand"> <!-- Font Quicksand -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!--Arrow at footer-->
@@ -48,81 +48,22 @@
 
     <div class="overlay"></div> <!--Shadow across the page when hamburger menu is open-->
     <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h2 class="rewardpage-ptext">Points Earned: 155</h2>
-    <h2 class="rewardpage-text">Gift Cards</h2>
+    <button class="back" type="button" onclick="history.back()"><img src="assets/arrowback.png" alt="back"></button>
+    <h2 class="rewardpage-ptext">Cost: 100 Points</h2>
     
-    <div class="giftcards"> <!--Gift cards section-->
+    <div class="redeemgiftcards"> <!--Gift cards section-->
 
-        <div class="giftcard">
-            <a href="redeem.html"><img src="assets/roblox.png" alt="robloxgiftcard"></a>  
-            <div class="giftcard-text">
-                $5 Roblox Gift Card
-                <span>100 Points</span>
-            </div>
-        </div>
-        
-        <div class="giftcard">
+        <div class="redeemgiftcard">
             <img src="assets/roblox.png" alt="robloxgiftcard">  
-            <div class="giftcard-textred">
-                $10 Roblox Gift Card
-                <span>200 Points</span>
+            <p>&nbsp;</p>
+            <div class="redeemgiftcard-text">
+                $5 Roblox Gift Card
+                <br>
+                <p>&nbsp;</p>
+                <a class="ownacc" onclick="alert('Successfully Redeemed!\nCode: AFOFIBKEOVS30593D')" href='index.html'>Redeem</a>
             </div>
         </div>
 
-    </div>
-
-    <h2 class="rewardpage-text">Collectibles (Web Exclusive)</h2>
-
-    <div class="models"> <!--Model section-->
-        <div class="model-card">
-            
-            <div class="sketchfab-embed-wrapper">
-                <iframe title="3D Clock (IP)" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/1880efe3d6e241d08b8fadf659efc848/embed?autospin=1&autostart=1&preload=1&transparent=1"></iframe>
-            </div>
-            
-            <div class="model-text">
-                Alarm Clock
-                <span>300 Points</span>
-            </div>
-        </div>
-
-        <div class="model-card">
-            
-            <div class="sketchfab-embed-wrapper">
-                <iframe title="mascot" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/5c0bad9de04a4e39865ed952261b2c5d/embed?autospin=1&autostart=1&transparent=1"></iframe>
-            </div>
-            
-            <div class="model-text">
-                Duck Mascot
-                <span>650 Points</span>
-            </div>
-        </div>
-
-        <div class="model-card">
-            
-            <div class="sketchfab-embed-wrapper">
-                <iframe title="mascot" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/5c0bad9de04a4e39865ed952261b2c5d/embed?autospin=1&autostart=1&transparent=1"></iframe>
-            </div>
-            
-            <div class="model-text">
-                Duck in a Robot Figurine
-                <span>900 Points</span>
-            </div>
-        </div>
-
-        <div class="model-card">
-            
-            <div class="sketchfab-embed-wrapper">
-                <iframe title="train_model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/207d3f4c90704ee6aa49701551fa8dc9/embed?autospin=1&autostart=1&transparent=1"></iframe>
-            </div>
-            
-            <div class="model-text">
-                Futuristic Light up Train
-                <span>1000 Points</span>
-            </div>
-        </div>
-    
     </div>
 
     <!-- Footer -->

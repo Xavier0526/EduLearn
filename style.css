@@ -1124,25 +1124,9 @@ h1 {
   color: #545454;
 }
 
-/* Links
-.nav-link {
-  text-decoration: none;
-  color: #545454;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: 0.2s;
-}*/
-
 .nav-link:hover {
   background: #eaf4ff;
 }
-
-/*.nav-link.active {
-  background: #00E66D;
-  color: white;
-}*/
-
 
 /* Push main content right */
 .main-wrapper {
@@ -1150,7 +1134,6 @@ h1 {
 }
 
 
-/* Hide sidebar on mobile */
 @media (max-width: 768px) {
   
   .side-nav {
@@ -1199,45 +1182,13 @@ h1 {
 }
 
 /* Header Layout */
-
 .header-left {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* Improve Buttons
-
-.back-btn,
-.menu-btn {
-  font-size: 22px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-}*/
-
-/* Profile Page */
-
-/* Header
-.top-bar {
-  background: white;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}*/
-
-/*.back-btn {
-  font-size: 22px;
-  text-decoration: none;
-  color: black;
-}*/
-
-
 /* Profile Center Layout */
-
 .profile-container {
   max-width: 380px;
   margin: 40px auto; /* center horizontally */
@@ -1246,7 +1197,6 @@ h1 {
 }
 
 /* Avatar Section */
-
 .avatar-box {
   display: flex;
   flex-direction: column;
@@ -1255,7 +1205,6 @@ h1 {
 }
 
 /* Avatar Image */
-
 .avatar {
   width: 150px;
   height: 150px;
@@ -1265,7 +1214,6 @@ h1 {
 }
 
 /* Input box */
-
 .profile-input {
   width: 100%;
   padding: 10px;
@@ -1277,7 +1225,6 @@ h1 {
 }
 
 /* Save Button */ 
-
 .save-btn {
   background: #63E600;
   box-shadow: 0 3px 0 #0CB100;
@@ -1337,7 +1284,7 @@ h1 {
 }
 
 
-/* Mobile Nav */
+/* Mobile Navigation */
 .bottom-nav {
   display: none;
   justify-content: space-around;
@@ -1471,14 +1418,6 @@ label {
   flex: 1;
 }
 
-/* Title 
-.page-title {
-  font-size: 26px;
-  margin-bottom: 25px;
-  color: #2f3f63;
-}*/
-
-
 /* Form */
 .form-box label {
   display: block;
@@ -1525,7 +1464,7 @@ label {
 }
 
 
-/* MOBILE LAYOUT */
+/* Mobile Responsiveness */
 
 @media (max-width: 768px) {
 
@@ -1630,7 +1569,7 @@ label {
   color: #545454;
 }
 
-/* Mobile responsiveness */
+/* Mobile Responsiveness */
 
 @media (max-width: 768px) {
 
@@ -1807,3 +1746,31 @@ label {
   color: #d30000;
   margin-top: 4px;
 }
+
+/* Redeem Page */
+.redeemgiftcards {
+  display: block;
+  justify-items: center;
+  margin: 40px auto;
+}
+
+.redeemgiftcard {
+  display: block;
+  text-align: center; 
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.redeemgiftcard img { 
+  width: 100%;
+}
+
+.redeemgiftcard-text {   /* Gift card for $5 */
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+

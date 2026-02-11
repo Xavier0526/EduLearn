@@ -1,7 +1,6 @@
 $(function () {
 
   const API_KEY = "69804ee3bf4bcc1e0853e428";
-  /*const DB_NAME = "login-94a6"; // Database name*/
   const DB_URL = `https://login-94a6.restdb.io/rest/customer`;
 
   // Login Process when clicked Login button
@@ -188,7 +187,6 @@ function resetPassword(e) {
   });
 }
 
-
 });
 
 // Edit Profile
@@ -257,6 +255,7 @@ saveBtn.addEventListener("click", () => {
     console.error("Error updating profile:", err);
     alert("Update profile Failed");
   });
+  
 });
 
 
