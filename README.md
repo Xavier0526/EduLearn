@@ -30,6 +30,7 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
 
 # Testing
 1. Login Page:
+
    i. When login
    
    ii. Try to login without username and password and verify that an error message about the required fields appears
@@ -38,7 +39,7 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
    
    iv. Try to login with invalid password and verify that a relevant error message appears
 
-3. 
+2. 
 
 # Credits
 **Content**
