@@ -1,7 +1,7 @@
 # Level-Up-Labs
-In a demanding academic environment, many students struggle to balance effective time management with learning. EduLearn is an application desgined to help students take control of their schedules while improving their academic performance. The app tracks students' daily activities to encourage better study habits and productivity. while offering personalized learning support for subjects they find challenging.
+In a demanding academic environment, where many students struggle to balance effective time management with learning. EduLearn is an application desgined to help students take control of their schedules while improving their academic performance. The app tracks students' daily activities to encourage better study habits and productivity. while offering personalized learning support for subjects they find challenging.
 
-To encourage consistent engagement, EduLearn features interactive quizzes where students can earn points and redeem rewards and prixes. By combining activity tracking, adaptive learning, and gamified quizzes, EduLearn motivates students to manage their time more effectively, stay engaged, and learn more efficiently.
+To encourage consistent engagement with users, EduLearn features interactive quizzes where students can earn points and redeem rewards and prizes. By combining activity tracking, adaptive learning and gamified quizzes, EduLearn motivates students to manage their time more effectively, stay engaged and learn more efficiently.
 
 # Design Process
 
@@ -26,6 +26,10 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
   
   - The project uses RestDB for sign up, login, change password and save details in profile page
 
+- [Trivia API](https://opentdb.com/api_config.php)
+
+  - The project uses Trivia API for quiz pages
+
 # Assistive AI
 1. RestDB: ChatGPT was used to help with the login part to allow user login properly
 ![Assistive AI Image](https://github.com/user-attachments/assets/bbb68a2f-bcde-4010-ac0a-730465c5168f)
@@ -41,11 +45,31 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
    
    iv. Try to login with invalid password and verify that a relevant error message appears
 
-2. 
+2. Form Page
+
+   i. Open the form page and verify all input fields Email, Subject / Description, Type of Issue are displayed there correctly.
+   
+   ii. Try submitting the form without filling in any fields and verify whether a warning message will appear about the missing fields.
+
+   iii.  Try entering an invalid email address (e.g. abc) and verify whether the browser will shows an invalid email format error.
+
+   iv. Try submitting with only some fields filled and verify that we cannot do the submission until all required fields are completed.
+
+   v. Enter valid inputs for all fields and click Submit and verify that the confirmation message will appear.
+
+   vi. Click “Go Back” on the confirmation popup and verify the user can return to the form without losing entered data.
+   
+   vii. Click “Submit” on the confirmation popup and verify that the Thank You message is displayed on the same page and allow users to navigate back.
+   
+   viii. Verify that form fields are cleared after successful submission.
 
 # Credits
 **Content**
 
+[Figma](https://www.figma.com/design/TiZfXijqJoQMg4Lv1CDlBi/AD_EduLearn_Prototype?node-id=0-1&p=f)
+
 **Media**
 
 **Acknowledgement**
+
+[ChatGPT](https://chatgpt.com/)
