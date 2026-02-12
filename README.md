@@ -26,7 +26,7 @@ To encourage consistent engagement with users, EduLearn features interactive qui
   
   - The project uses RestDB for sign up, login, change password and save details in profile page
 
-- [Trivia APU](https://opentdb.com/api_config.php)
+- [Trivia API](https://opentdb.com/api_config.php)
 
   - The project uses Trivia API for quiz pages
 
