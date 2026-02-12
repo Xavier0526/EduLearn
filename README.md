@@ -3,10 +3,10 @@ In a demanding academic environment, where many students struggle to balance eff
 
 To encourage consistent engagement with users, EduLearn features interactive quizzes where students can earn points and redeem rewards and prizes. By combining activity tracking, adaptive learning and gamified quizzes, EduLearn motivates students to manage their time more effectively, stay engaged and learn more efficiently.
 
-# Design Process
+## Design Process
 
 
-# Features
+## Features
 - Feature 1 - Allows user to create/sign up for an account, by filling up username, email and password
 - Feature 2 - Allows user to login their account that they have created, by entering usernaame and password
 - Feature 3 - Allows user to change password when they forget their account password
@@ -21,7 +21,7 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 - Feature 12 - Allows user to communicate with the support by filling up the contact us form that need their name, email and their questions.
 - Feature 13 - Allows user to log out after using finish the app
 
-# Technologies Used
+## Technologies Used
 - [RestDB](https://restdb.io/)
   
   - The project uses RestDB for sign up, login, change password and save details in profile page
@@ -42,11 +42,11 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 
   - Validate JavaScript Codes
  
-# Assistive AI
+## Assistive AI
 1. RestDB: ChatGPT was used to help with the login part to allow user login properly
 ![Assistive AI Image](https://github.com/user-attachments/assets/bbb68a2f-bcde-4010-ac0a-730465c5168f)
 
-# Testing
+## Testing
 1. Login Page:
 
    i. When login
@@ -75,15 +75,15 @@ To encourage consistent engagement with users, EduLearn features interactive qui
    
    viii. Verify that form fields are cleared after successful submission.
 
-# Credits
-**Content**
+## Credits
+###Content
 
 [Figma](https://www.figma.com/design/TiZfXijqJoQMg4Lv1CDlBi/AD_EduLearn_Prototype?node-id=0-1&p=f)
 
-**Media**
+###Media
 The photos used in this site were obtained from:
 
-__Partnerships Logo__
+Partnerships Logo
 
 https://logowik.com/gegenfeld-logo-vector-78339.html 
 
@@ -92,7 +92,7 @@ https://logowik.com/membre-associe-psl-universite-paris-logo-vector-77170.html
 https://logowik.com/perculus-logo-vector-76990.html#google_vignette
 
 
-__images__
+images
 
 https://unsplash.com/photos/womans-face-EGVccebWodM
 
@@ -111,7 +111,7 @@ https://www.roblox.com/shopgiftcards
 https://unsplash.com/photos/person-holding-ballpoint-pen-writing-on-notebook-505eectW54k
 
 
-__Icons__
+Icons
 
 Arrow back - https://www.flaticon.com/free-icon-font/arrow-left_3916810?term=arrow&related_id=3916810
 
@@ -137,10 +137,10 @@ small cross used for time management - https://www.flaticon.com/free-icon-font/c
 
 burger - https://www.flaticon.com/free-icon-font/menu-burger_3917762?page=1&position=3&term=menu&origin=search&related_id=3917762
 
-__Audio__
+Audio
 https://pixabay.com/sound-effects/search/button-click/
 
-**Acknowledgement**
+###Acknowledgement
 
 [ChatGPT](https://chatgpt.com/) was used to help with code
 
