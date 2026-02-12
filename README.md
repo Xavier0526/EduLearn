@@ -41,7 +41,25 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
    
    iv. Try to login with invalid password and verify that a relevant error message appears
 
-2. 
+2. Form Page
+
+   i. Open the form page and verify all input fields (Email, Subject/Description, Type of Issue) are displayed correctly.
+
+   ii. Try submitting the form without filling in any fields and verify that required field validation appears.
+
+   iii. Try entering an invalid email address (e.g. abc) and verify that the browser shows an email format error.
+
+   iv. Try submitting with only some fields filled and verify submission is blocked until all required fields are completed.
+
+   v. Try submitting with only some fields and click Submit - verify that the confirmation popup appears.
+
+   vi. Click “Go Back” on the confirmation popup and verify the user returns to the form without losing entered data.
+
+   vii. Click “Submit” on the confirmation popup and verify that the Thank You message is displayed on the same page and allow users to navigate  back.
+
+   viii. Verify that form fields are cleared after successful submission.
+
+   ix. Test the back arrow navigation and ensure it returns to the previous page.
 
 # Credits
 **Content**
