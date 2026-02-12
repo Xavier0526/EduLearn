@@ -1,13 +1,13 @@
 // Home Page
 
 if (document.querySelector('.menu-btn')) {
-
-const menuBtn = document.querySelector('.menu-btn');
-const closeBtn = document.querySelector('.close-btn');
-const sideNav = document.querySelector('.side-nav');
-const overlayHome = document.querySelector('.overlay');
-
-const toggleMenu = () => {
+  
+  const menuBtn = document.querySelector('.menu-btn');
+  const closeBtn = document.querySelector('.close-btn');
+  const sideNav = document.querySelector('.side-nav');
+  const overlayHome = document.querySelector('.overlay');
+  
+  const toggleMenu = () => {
     sideNav.classList.toggle('open');
     overlayHome.classList.toggle('show');
 };
@@ -272,12 +272,10 @@ function setupDrop(box, status) {
 
 }
 
-
 setupDrop(dueBox, "due");
 setupDrop(completedBox, "done");
 
 renderTasks();
-
 
 }
 
