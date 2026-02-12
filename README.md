@@ -61,9 +61,11 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 
 # Credits
 **Content**
+
 [Figma](https://www.figma.com/design/TiZfXijqJoQMg4Lv1CDlBi/AD_EduLearn_Prototype?node-id=0-1&p=f)
 
 **Media**
 
 **Acknowledgement**
+
 [ChatGPT](https://chatgpt.com/)
