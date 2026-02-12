@@ -69,6 +69,19 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 [Figma](https://www.figma.com/design/TiZfXijqJoQMg4Lv1CDlBi/AD_EduLearn_Prototype?node-id=0-1&p=f)
 
 **Media**
+The photos used in this site were obtained from:
+
+<u>Partnerships Logo</u>
+
+https://logowik.com/gegenfeld-logo-vector-78339.html 
+
+https://logowik.com/membre-associe-psl-universite-paris-logo-vector-77170.html
+
+https://logowik.com/perculus-logo-vector-76990.html#google_vignette
+
+
+__images__
+
 
 **Acknowledgement**
 
