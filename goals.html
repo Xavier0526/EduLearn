@@ -10,38 +10,39 @@
 </head>
 <body>
     
+    <audio id="audio" src="assets/autoclick.mp3"></audio> <!-- Audio -->
 
     <header class="top-bar"> <!--Header-->
         <div class="header-left">
             <button class="menu-btn"><img src="assets/menu.png" alt="Menu"></button>
-            <a href="index.html" class="edulearn"><img src="assets/logo.png" alt="Logo"></a>      
+            <a onclick="soundOut('index.html')" class="edulearn"><img src="assets/logo.png" alt="Logo"></a>      
         </div>
-        <a href="userprofile.html"><img src="assets/userprofile.jpg" class="profile" alt="Profile"></a>
+        <a onclick="soundOut('userprofile.html')"><img src="assets/userprofile.jpg" class="profile" alt="Profile"></a>
     </header>
 
     <nav class="side-nav"> <!--Hamburger-->
         <button class="close-btn"><img src="assets/cross.png" alt="X"></button>
 
-        <a href="index.html">
+        <a onclick="soundOut('index.html')">
           <img src="assets/logo.png" class="logo" alt="logo">
         </a>
 
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" onclick="soundOut('index.html')">
             <img src="assets/home.png" alt="Home">
             <span>Home</span>
         </a>
 
-        <a class="nav-link active" href="time.html">
+        <a class="nav-link active" onclick="soundOut('time.html')">
             <img src="assets/time.png" alt="Time Management">
             <span>Time Management</span>
         </a>
 
-        <a class="nav-link" href="quiz.html">
+        <a class="nav-link" onclick="soundOut('quiz.html')">
             <img src="assets/quiz.png" alt="Quiz">
             <span>Quiz</span>
         </a>
 
-        <a class="nav-link" href="more.html">
+        <a class="nav-link" onclick="soundOut('more.html')">
             <img src="assets/more.png" alt="More">
             <span>More</span>
         </a>

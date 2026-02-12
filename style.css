@@ -1586,6 +1586,17 @@ label {
   width: 100%;
   max-width: 250px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.giftcard:hover { /* button opacity drop when hovering */
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.023);
+}
+
+.giftcard:active {
+  transform: scale(0.97);
 }
 
 .giftcard img {
@@ -1606,6 +1617,10 @@ label {
   text-align: center;
   font-weight: 600;
   font-size: 14px;
+}
+
+.giftcard:has(.giftcard-textred):hover { /* button opacity drop when hovering */
+  opacity: 0.5;
 }
 
 .giftcard-text span {   /* Gift card for $5 */
@@ -1661,7 +1676,13 @@ label {
   font-weight: 600;
   font-size: 14px;
   border-radius: 0 0 12px 12px;
+  cursor: pointer;
 }
+
+.model-card:has(.model-text):hover {
+  opacity: 0.5;
+}
+
 
 .model-text span {
   display: block;
@@ -1697,3 +1718,14 @@ label {
   font-size: 20px;
 }
 
+@media (max-width: 768px) {
+  .giftcards {
+    gap: 25px;
+    padding: 0 20px;
+    grid-template-columns: 1fr; /* 1 column instead of 2 columns */
+  }
+
+  .giftcard {
+    max-width: 100%;
+  }
+}
