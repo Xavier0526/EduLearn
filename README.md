@@ -30,6 +30,18 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 
   - The project uses Trivia API for quiz pages
 
+- [HTML Validation](https://validator.w3.org/#validate_by_upload)
+
+  - Validate HTML Codes
+
+- [CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_upload)
+
+  - Validate CSS Codes
+
+- [JavaScript Validation](https://codebeautify.org/jsvalidate)
+
+  - Validate JavaScript Codes
+ 
 # Assistive AI
 1. RestDB: ChatGPT was used to help with the login part to allow user login properly
 ![Assistive AI Image](https://github.com/user-attachments/assets/bbb68a2f-bcde-4010-ac0a-730465c5168f)
@@ -129,7 +141,7 @@ burger - https://www.flaticon.com/free-icon-font/menu-burger_3917762?page=1&posi
 
 **Acknowledgement**
 
-[ChatGPT](https://chatgpt.com/)
+[ChatGPT](https://chatgpt.com/) was used to help with code
 
 https://www.w3schools.com/
 
