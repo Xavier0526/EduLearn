@@ -23,9 +23,12 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 
 # Technologies Used
 - [RestDB](https://restdb.io/)
-- [Trivia APU](https://opentdb.com/api_config.php)
   
   - The project uses RestDB for sign up, login, change password and save details in profile page
+
+- [Trivia APU](https://opentdb.com/api_config.php)
+
+  - The project uses Trivia API for quiz pages
 
 # Assistive AI
 1. RestDB: ChatGPT was used to help with the login part to allow user login properly
