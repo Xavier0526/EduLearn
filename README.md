@@ -1,7 +1,7 @@
 # Level-Up-Labs
-In a demanding academic environment, many students struggle to balance effective time management with learning. EduLearn is an application desgined to help students take control of their schedules while improving their academic performance. The app tracks students' daily activities to encourage better study habits and productivity. while offering personalized learning support for subjects they find challenging.
+In a demanding academic environment, where many students struggle to balance effective time management with learning. EduLearn is an application desgined to help students take control of their schedules while improving their academic performance. The app tracks students' daily activities to encourage better study habits and productivity. while offering personalized learning support for subjects they find challenging.
 
-To encourage consistent engagement, EduLearn features interactive quizzes where students can earn points and redeem rewards and prixes. By combining activity tracking, adaptive learning, and gamified quizzes, EduLearn motivates students to manage their time more effectively, stay engaged, and learn more efficiently.
+To encourage consistent engagement with users, EduLearn features interactive quizzes where students can earn points and redeem rewards and prizes. By combining activity tracking, adaptive learning and gamified quizzes, EduLearn motivates students to manage their time more effectively, stay engaged and learn more efficiently.
 
 # Design Process
 
@@ -59,11 +59,11 @@ To encourage consistent engagement, EduLearn features interactive quizzes where 
 
    viii. Verify that form fields are cleared after successful submission.
 
-   ix. Test the back arrow navigation and ensure it returns to the previous page.
-
 # Credits
 **Content**
+[Figma](https://www.figma.com/design/TiZfXijqJoQMg4Lv1CDlBi/AD_EduLearn_Prototype?node-id=0-1&p=f)
 
 **Media**
 
 **Acknowledgement**
+[ChatGPT](https://chatgpt.com/)
