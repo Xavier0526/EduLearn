@@ -5,7 +5,8 @@ html, body {
   margin: 0;
   padding: 0;
   color: #545454;
-  background-image: radial-gradient(circle, #cce7ff, white);
+  background: radial-gradient(circle, #cce7ff, white);
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
