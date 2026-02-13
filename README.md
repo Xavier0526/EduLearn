@@ -3,6 +3,9 @@ In a demanding academic environment, where many students struggle to balance eff
 
 To encourage consistent engagement with users, EduLearn features interactive quizzes where students can earn points and redeem rewards and prizes. By combining activity tracking, adaptive learning and gamified quizzes, EduLearn motivates students to manage their time more effectively, stay engaged and learn more efficiently.
 
+### Github Link
+https://github.com/Xavier0526/EduLearn
+
 ## Design Process
 
 
