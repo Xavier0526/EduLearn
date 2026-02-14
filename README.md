@@ -198,7 +198,7 @@ https://www.youtube.com/watch?v=6ukTdMSlerI
 #### Keno
 - Design for the whole web application as well as compiling the codes and linking between pages for unlinked pages
   
-- Quiz Page using TrivaAPI and JavaScript to fetch questions from API as well as HTML and CSS for the interface and design
+- Quiz Page using TriviaAPI and JavaScript to fetch questions from API as well as HTML and CSS for the interface and design
 
 - Rewards Page using HTML for the interface and CSS, as well as embedment of the 3D models using iframe (embed is retrieved from Sketchfab)
   
