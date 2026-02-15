@@ -6,6 +6,7 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 ### Github Link
 https://github.com/Xavier0526/EduLearn
 
+### Github Pages Link
 https://xavier0526.github.io/EduLearn/
 
 ## Design Process
