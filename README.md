@@ -6,6 +6,8 @@ To encourage consistent engagement with users, EduLearn features interactive qui
 ### Github Link
 https://github.com/Xavier0526/EduLearn
 
+https://xavier0526.github.io/EduLearn/
+
 ## Design Process
 Students often struggle to manage assignment and project datelines, stay attentive during lessons, and use their time productively. Instead of completing their work early, they procrastinate and delay their tasks, resulting in poor academic performance. This lowers student's confidence and self esteem, which reinforces unhealthy study habits. To address this underlying issue, we developed an app that provides deadline tracking features that serve as reminders. The app also includes a quiz section with over 4000 unique questions, where students can complete to earn points and redeem rewards. The reward system encourages users to continue using the app.
 
